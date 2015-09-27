@@ -1,0 +1,67 @@
+<!doctype HTML>
+<html>
+	<header>
+		<style type="text/css"></style>
+	</header>
+
+	<body>
+
+		<div></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+
+$(document).ready(function () {
+
+  $(document).ready(function () {
+
+  $.ajax({
+  url:"https://www.kimonolabs.com/api/6u7b4z8y?apikey=fYdD1fEvApWWgdKqvAGBRtuL3rgOaIRp",
+  crossDomain: true,
+  dataType: "jsonp",
+  success: function (response) {
+    $('.loader').css('display', 'none');
+    $('.grade').css('display', 'block');
+    var psiRead = response.results.collection1[0].psiRead;
+    // var psiRead = 186;
+    console.log(psiRead);
+    $(".psi").html(psiRead);
+    if(psiRead < 51){
+            $('body').css("background-color", "#008000");
+            $('body').css("color", "#ADFF2F");
+            $('.grade').html("Good");
+    }else if(psiRead > 50 && psiRead < 101){
+            $('body').css("background-color", "#008B8B");
+            $('body').css("color", "aquamarine");
+            $('.grade').html("Moderate");
+    }else if(psiRead > 100 && psiRead < 201){
+            $('body').css("background-color", "#FFD700");
+            $('body').css("color", "#FF8C00");
+            $('.grade').html("Unhealthy");
+    }else if(psiRead > 200 && psiRead < 301){
+            $('body').css("background-color", "#FF8C00");
+            $('body').css("color", "#FFD700");
+            $('.grade').html("Very unhealthy");
+    }else{
+            $('body').css("background-color", "#B22222");
+            $('body').css("color", "red");
+            $('.grade').html("Hazardous");
+    };
+
+  },
+  error: function (xhr, status) {
+    $('.loader').html('The haze broke us. Come back later.');
+  }
+});
+
+window.ontouchmove = function(e){
+  e.preventDefault();
+};
+
+
+
+});
+
+
+		</script>
+	</body>
+</html>
