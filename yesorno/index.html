@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>ARE YOU HAPPY OR SAD?</title>
+
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script src="assets/js/tabletop.js"></script>
+
+    </head>
+
+    <body>
+        <div class="question_container animate"> <!-- This is the whole window, so I can make it disappear -->
+        <form action="https://docs.google.com/forms/d/1tqAfOAOi06RSIPhGcCkUOIq3yJ_tBsIpaOlVDSNqU3w/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit=""> <!-- This puts shit in my google doc, and declares the form -->
+        <div class="left"> <!-- This is the left hand div -->
+            <div class="centre rollover"><button class="button" href="#" name="entry.1058210029" id="group_1058210029_1" value="Yes">😃</a></div>
+        </div> <!-- Left close -->
+        <div class="right"> <!-- This is the right hand div -->
+            <div class="centre rollover"><button class="button" href="#" name="entry.1058210029" id="group_1058210029_2" value="No">😢</a></div>
+        </div> <!-- Right close -->
+    </div> <!-- Container close -->
+
+<div class="answer_container animate"> <!-- This is the answer window -->
+<div class="happy result"><div class="centre right-align"><span class="face happy-numbers numbers"></span><span class="face">😃</span></div></div>
+<div class="sad result"><div class="centre left-align"><span class="face">😢</span><span class="face sad-numbers numbers"></span></div></div>
+</div>
+        </div>
+    </form>
+    <script type="text/javascript">var submitted=false;</script> <!-- I don't know what this does -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> <!-- This is the fake iframe that stops google form taking you to their confirmation page-->
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+    </html>
