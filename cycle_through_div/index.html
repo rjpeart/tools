@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Result</title>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	</head>
+	<body>
+        <div></div>  
+        <script type="text/javascript">
+        $(document).ready(function(){
+
+	var twat = [
+	'twat1', 
+	'twat2', 
+	'twat3',
+	];
+	
+displayTwat = function(arr){
+
+
+	$('div').html(arr[0]);
+	var i = 1;
+	setInterval(
+		function(){
+			$('div').html(arr[i]);
+			i++;
+			if(i >= twat.length)i=0;
+		},500);
+}
+
+displayTwat(twat);
+
+});
+        </script> 
+	</body>
+</html>
